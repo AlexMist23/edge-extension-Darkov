@@ -1,0 +1,25 @@
+{
+  "name": "Darkov",
+  "version": "0.0.0.1",
+  "manifest_version": 3,
+  "description": "Extension for Edge browser that automatically changes the color scheme.",
+  "icons": {
+    "128": "icons/darkov128x128.png"
+  },
+  "action": {
+    "default_popup": "popup/popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content-scripts/content.js"]
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["images/*.jpeg"],
+      "matches": ["<all_urls>"],
+      "css": ["css/styles.css"]
+    }
+  ]
+}
